@@ -6,27 +6,36 @@
     <link rel="stylesheet" href="css/site.css">
   </head>
   <body>
+    <!-- Alyssa: add classes as needed! -->
     <div class="container">
       <h1>JavaScript Tip Calculator</h1>
       <div>
-        <span>$</span><input id="check-amount" type="text">
+        <!-- Alyssa: Maybe use ":before" to add a $ -->
+        <input id="check-amount" type="number" placeholder="00.00" step="0.01" min="0">
       </div>
       <div>
-      <select id="tip-percentage" class="">
-        <option selected>[Select Service Level]</option>
-        <option value=".05">Poor Service</option>
-        <option value=".15">Good Service</option>
-        <option value=".20">Excellent Service</option>
+      <select id="tip-percentage" placeholder="Select Service Level">
+        <option value="0">Select a Service Level</option>
+        <option value="1.05">Poor Service</option>
+        <option value="1.15">Good Service</option>
+        <option value="1.20">Excellent Service</option>
       </select>
       </div>
       <div>
         <input id="total-check-amount" type="text" readonly>
       </div>
       <div>
-        <button>CALCULATE!</button>
+        <button id="calculate-button">CALCULATE!</button>
       </div>
-      <div id="error-messages"></div>
+      <div id="error-messages">
+        <!-- Alyssa: create a structure for an error message and style it :)
+             You can put it in this space and I will hide it until neccessary -->
+      </div>
     </div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
     <script type="text/javascript" src="js/site.js"></script>
   </body>
 </html>
