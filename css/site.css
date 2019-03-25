@@ -1,0 +1,62 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-top: 20px;
+  background-image: linear-gradient(to right, #E0C2CC, #A6AFD0);
+
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Roboto Mono', monospace;
+  padding-bottom: 20px;
+}
+
+#calculator-wrapper {
+  display: inline-flex;
+
+}
+
+#calculator-controls {
+  display: inline-grid;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  width: 400px;
+  height: 250px;
+  padding: 20px 0;
+}
+
+#check-amount:before {
+  /* how to add $ sign to the placeholder? */
+  content: '$';
+}
+
+#check-amount {
+  border-radius: 6%;
+  font-size: 1.6em;
+  width: 200px;
+  height: 45px;
+  text-align: center;
+
+}
+
+/* Dropdown */
+#tip-percentage {
+  background-color: none;
+  border: 1px solid #574b90;
+  height: 40px;
+}
+
+#calculate-button {
+  color: black;
+  font-size: 1.1em;
+  background-color: #f6e58d;
+  border-radius: 6px;
+  width: 150px;
+  height: 40px;
+  text-transform: lowercase;
+}

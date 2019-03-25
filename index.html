@@ -4,15 +4,17 @@
     <meta charset="utf-8">
     <title>JavaScript Tip Calculator</title>
     <link rel="stylesheet" href="css/site.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+
   </head>
   <body>
     <!-- Alyssa: add classes as needed! -->
     <div class="container">
       <h1>JavaScript Tip Calculator</h1>
-      <div>
+      <div id="calculator-wrapper">
+      <div id="calculator-controls">
         <!-- Alyssa: Maybe use ":before" to add a $ -->
         <input id="check-amount" type="number" placeholder="00.00" step="0.01" min="0">
-      </div>
       <div>
       <select id="tip-percentage" placeholder="Select Service Level">
         <option value="0">Select a Service Level</option>
@@ -27,6 +29,8 @@
       <div>
         <button id="calculate-button">CALCULATE!</button>
       </div>
+    </div>
+  </div>
       <div id="error-messages">
         <!-- Alyssa: create a structure for an error message and style it :)
              You can put it in this space and I will hide it until neccessary -->
