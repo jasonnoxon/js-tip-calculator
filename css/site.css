@@ -30,11 +30,6 @@ h1 {
   padding: 20px 0;
 }
 
-#check-amount:before {
-  /* how to add $ sign to the placeholder? */
-  content: '$';
-}
-
 #check-amount {
   border-radius: 6%;
   font-size: 1.6em;
@@ -42,6 +37,16 @@ h1 {
   height: 45px;
   text-align: center;
 
+}
+
+#dollar-sign{
+  display: inline;
+}
+
+#dollar-sign:before {
+  content: '$';
+  position: absolute;
+  font-size: 1.6em;
 }
 
 /* Dropdown */
