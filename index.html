@@ -4,41 +4,60 @@
     <meta charset="utf-8">
     <title>JavaScript Tip Calculator</title>
     <link rel="stylesheet" href="css/site.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto+Mono|Lato|Damion" rel="stylesheet">
 
   </head>
   <body>
     <!-- Alyssa: add classes as needed! -->
     <div class="container">
-      <h1>JavaScript Tip Calculator</h1>
       <div id="calculator-wrapper">
+        <div id="js-title">JavaScript</div>
+        <div id="tip-calc-title">Tip Calculator</div>
+
+<!-- start 2 col grid -->
         <div id="calculator-controls">
           <!-- Alyssa: Maybe use ":before" to add a $ -->
           <!-- Here it is, Jason! -->
-          <div id="dollar-sign">
-            <input id="check-amount" type="number" placeholder="00.00" step="0.01" min="0">
+
+
+            <label for="check-amount">Bill Amount:</label>
+            <div id="dollar-sign">
+              <input id="check-amount" type="number" placeholder="00.00" step="0.01" min="0">
+            </div>
+
+
+
+            <label for="tip-percentage">Tip Percentage:</label>
+            <!-- <div> -->
+              <select id="tip-percentage" placeholder="Select Service Level">
+                <option value="0">Select a Service Level</option>
+                <option value="1.05">Poor Service</option>
+                <option value="1.15">Good Service</option>
+                <option value="1.20">Excellent Service</option>
+              </select>
+            <!-- </div> -->
+
+
+
+            <label for="total-check-amount">Total Check Amount:</label>
+            <!-- <div id="total-amount"> -->
+              <input id="total-check-amount" type="text" readonly>
+            <!-- </div> -->
           </div>
+          <!-- End 2 col grid -->
+
         <div>
-        <select id="tip-percentage" placeholder="Select Service Level">
-          <option value="0">Select a Service Level</option>
-          <option value="1.05">Poor Service</option>
-          <option value="1.15">Good Service</option>
-          <option value="1.20">Excellent Service</option>
-        </select>
+          <button id="calculate-button">Calculate</button>
         </div>
-        <div>
-          <input id="total-check-amount" type="text" readonly>
-        </div>
-        <div>
-          <button id="calculate-button">Calculate!</button>
-        </div>
-      </div>
+
+
   </div>
       <div id="error-messages">
         <!-- Alyssa: create a structure for an error message and style it :)
              You can put it in this space and I will hide it until neccessary -->
+
       </div>
-    </div>
+  </div>
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
             crossorigin="anonymous">

@@ -1,7 +1,7 @@
 body {
-  font-family: 'Roboto Condensed', sans-serif;
-  padding-top: 20px;
-  background-image: linear-gradient(to right, #E0C2CC, #A6AFD0);
+  font-family: 'Lato', sans-serif;
+  padding-top: 40px;
+  background-image: linear-gradient(to right, #f8c291, #fab1a0);
 
 }
 
@@ -9,36 +9,59 @@ body {
   text-align: center;
 }
 
-h1 {
-  font-family: 'Roboto Mono', monospace;
-  padding-bottom: 20px;
-}
-
+/* White Form area */
 #calculator-wrapper {
-  text-align: center;
-}
-
-#calculator-controls {
   display: inline-block;
+  text-align: center;
   background-color: white;
   border: 1px solid lightgray;
-  border-radius: 10px;
+  border-radius: 6px;
   width: 400px;
-  height: 250px;
-  padding: 30px 0 0 0;
+  height: 330px;
+  padding: 30px 0;
+  box-shadow: 10px 10px 16px -7px rgba(0,0,0,0.45);
+  -webkit-box-shadow: 10px 10px 16px -7px rgba(0,0,0,0.45);
+  -moz-box-shadow: 10px 10px 16px -7px rgba(0,0,0,0.45);
 }
 
-#check-amount {
-  border-radius: 6%;
-  font-size: 1.6em;
-  width: 200px;
-  height: 45px;
-  text-align: center;
+#js-title {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 20px;
+}
 
+#tip-calc-title {
+  font-family: 'Damion', cursive;
+  font-size: 40px;
+}
+
+/* GRID */
+#calculator-controls {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  grid-auto-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 10px;
+  grid-row-gap: 20px;
+  margin-top: 30px;
+}
+
+label{
+  text-align: right;
+  margin-right: 10px;
+}
+
+input {
+  border: 1px solid lightgray;
+  font-size: 1.3em;
+  width: 100%;
+  height: 100%;
+  text-align: center;
 }
 
 #dollar-sign{
   display: inline;
+  height: 100%;
 }
 
 #dollar-sign:before {
@@ -49,24 +72,30 @@ h1 {
 
 /* Dropdown */
 #tip-percentage {
+  display: inline-block;
   background-color: none;
-  border: 1px solid #574b90;
-  height: 40px;
-  margin-top: 20px;
+  border: 1px solid lightgray;
+  webkit-appearance: none;
+  -webkit-border-radius: 0px;
+  /* height: 40px; */
+  width: 100%;
+  height: 100%;
 }
 
-#total-check-amount {
-  margin-top: 20px;
-}
 
 #calculate-button {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Lato', monospace;
   color: white;
   font-size: 1.1em;
   letter-spacing: .5px;
-  background-color: #34495e;
+  background-color: #27ae60;
   border-radius: 6px;
   width: 150px;
   height: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+button:focus, input:focus, select:focus
+{
+  outline: 0;
 }
