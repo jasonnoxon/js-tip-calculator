@@ -1,6 +1,6 @@
 // Helper Functions
 function calculateTip(checkAmount, tipPercentage) {
-  return (checkAmount * tipPercentage).toFixed(2);
+  return (checkAmount * tipPercentage);
 }
 
 function checkForm(checkAmount, tipPercentage) {
@@ -32,10 +32,10 @@ $(document).ready(function() {
 
   calculateButton.on("click", function(){
     if(checkForm(checkAmount, tipPercentage)) {
-      var calculatedTipAmount = parseFloat(calculateTip(checkAmount, tipPercentage)).toFixed(2);
+      var calculatedTipAmount = calculateTip(+checkAmount, +tipPercentage).toFixed(2);
 
       tipAmount.val(calculatedTipAmount);
-      totalCheckAmount.val(parseFloat(checkAmount + calculatedTipAmount));
+      totalCheckAmount.val((+checkAmount + +calculatedTipAmount).toFixed(2));
     }
     else {
       // handle the error
